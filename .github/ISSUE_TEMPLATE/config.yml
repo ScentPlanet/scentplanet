@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discord Community
+    url: https://discord.gg/scentplanet
+    about: Get help and chat with other users on Discord
+  - name: Game Profile Contributions
+    url: https://github.com/ScentPlanet/game-profiles
+    about: Want to add support for a new game? Submit a game profile!
+  - name: FAQ
+    url: https://github.com/ScentPlanet/scentplanet/blob/main/docs/faq.md
+    about: Check our FAQ before opening an issue
