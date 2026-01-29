@@ -5,7 +5,7 @@
     <a href="#下载">下载</a> &bull;
     <a href="#功能特性">功能特性</a> &bull;
     <a href="docs/getting-started.md">快速开始</a> &bull;
-    <a href="https://discord.gg/scentplanet">Discord</a>
+    <a href="https://discord.com/channels/1450784037886103605/1450793325228458095">Discord</a>
   </p>
   <p>
     <img src="https://img.shields.io/github/v/release/ScentPlanet/scentplanet?style=flat-square" alt="Latest Release">
@@ -95,7 +95,7 @@ ScentPlanet 需要配套的硬件设备来释放气味。
 
 | | |
 |---|---|
-| **Discord** | [加入服务器](https://discord.gg/scentplanet) |
+| **Discord** | [加入服务器](https://discord.com/channels/1450784037886103605/1450793325228458095) |
 | **报告 Bug** | [提交 Issue](https://github.com/ScentPlanet/scentplanet/issues/new?template=bug_report.yml) |
 | **功能建议** | [提交想法](https://github.com/ScentPlanet/scentplanet/issues/new?template=feature_request.yml) |
 | **贡献游戏配置** | [game-profiles 仓库](https://github.com/ScentPlanet/game-profiles) |
@@ -148,7 +148,7 @@ ScentPlanet 是专有软件。详情请参阅 [LICENSE](LICENSE)。
   <p>由 ScentPlanet 团队倾情打造</p>
   <p>
     <a href="https://scentplanet.app">官网</a> &bull;
-    <a href="https://discord.gg/scentplanet">Discord</a> &bull;
+    <a href="https://discord.com/channels/1450784037886103605/1450793325228458095">Discord</a> &bull;
     <a href="https://x.com/ScentPlanetApp">Twitter</a>
   </p>
 </div>

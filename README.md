@@ -6,7 +6,7 @@
     <a href="#download">Download</a> &bull;
     <a href="#features">Features</a> &bull;
     <a href="docs/getting-started.md">Getting Started</a> &bull;
-    <a href="https://discord.gg/scentplanet">Discord</a>
+    <a href="https://discord.com/channels/1450784037886103605/1450793325228458095">Discord</a>
   </p>
   <p>
     <img src="https://img.shields.io/github/v/release/ScentPlanet/scentplanet?style=flat-square" alt="Latest Release">
@@ -98,7 +98,7 @@ Join our community to get help, share feedback, and connect with other users.
 
 | | |
 |---|---|
-| **Discord** | [Join our server](https://discord.gg/scentplanet) |
+| **Discord** | [Join our server](https://discord.com/channels/1450784037886103605/1450793325228458095) |
 | **Report Bug** | [Create an issue](https://github.com/ScentPlanet/scentplanet/issues/new?template=bug_report.yml) |
 | **Request Feature** | [Submit an idea](https://github.com/ScentPlanet/scentplanet/issues/new?template=feature_request.yml) |
 | **Contribute Games** | [game-profiles repo](https://github.com/ScentPlanet/game-profiles) |
@@ -151,7 +151,7 @@ Game profiles in [ScentPlanet/game-profiles](https://github.com/ScentPlanet/game
   <p>Made with ❤️ by the ScentPlanet Team</p>
   <p>
     <a href="https://scentplanet.app">Website</a> &bull;
-    <a href="https://discord.gg/scentplanet">Discord</a> &bull;
+    <a href="https://discord.com/channels/1450784037886103605/1450793325228458095">Discord</a> &bull;
     <a href="https://x.com/ScentPlanetApp">Twitter</a>
   </p>
 </div>
