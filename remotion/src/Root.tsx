@@ -9,7 +9,7 @@ export const RemotionRoot = () => {
         <Composition
           id="ScentPlanetPromo"
           component={ScentPlanetPromo}
-          durationInFrames={450} // 15 seconds at 30fps
+          durationInFrames={360} // 12 seconds at 30fps
           fps={30}
           width={1920}
           height={1080}
