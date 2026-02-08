@@ -14,7 +14,7 @@ Real scent, triggered by AI, delivered in real time.
 
 <br/>
 
-[![Download](https://img.shields.io/github/v/release/ScentPlanet/scentplanet?label=Download&color=0055A4&style=flat-square)](https://github.com/ScentPlanet/scentplanet/releases/latest)&nbsp;&nbsp;[![Platform](https://img.shields.io/badge/Windows%2010%2F11-0078D4?style=flat-square&logo=windows11&logoColor=white)](https://github.com/ScentPlanet/scentplanet/releases/latest)&nbsp;&nbsp;[![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/channels/1450784037886103605/1450793325228458095)
+[![Download](https://img.shields.io/github/v/release/ScentPlanet/scentplanet?label=Download&color=0055A4&style=flat-square)](https://github.com/ScentPlanet/scentplanet/releases/latest/download/ScentPlanet-Setup.exe)&nbsp;&nbsp;[![Platform](https://img.shields.io/badge/Windows%2010%2F11-0078D4?style=flat-square&logo=windows11&logoColor=white)](https://github.com/ScentPlanet/scentplanet/releases/latest/download/ScentPlanet-Setup.exe)&nbsp;&nbsp;[![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/channels/1450784037886103605/1450793325228458095)
 
 <br/>
 
