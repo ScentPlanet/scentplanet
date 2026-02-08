@@ -1,0 +1,455 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <defs>
+    <!-- Background -->
+    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0A"/>
+      <stop offset="50%" stop-color="#0C0C0F"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </linearGradient>
+
+    <!-- Node gradients -->
+    <linearGradient id="nodeGame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0055A4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0055A4" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="nodeAI" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C8E8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#00C8E8" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="nodeScent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C853" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#00C853" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="nodeBLE" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C8E8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0055A4" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <!-- Arrow gradient -->
+    <linearGradient id="arrowGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0055A4"/>
+      <stop offset="100%" stop-color="#00C8E8"/>
+    </linearGradient>
+    <linearGradient id="arrowGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00C8E8"/>
+      <stop offset="100%" stop-color="#00C853"/>
+    </linearGradient>
+    <linearGradient id="arrowGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00C853"/>
+      <stop offset="100%" stop-color="#00C8E8"/>
+    </linearGradient>
+
+    <!-- Glow radials for nodes -->
+    <radialGradient id="glowNodeBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0055A4" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0055A4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowNodeCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00C8E8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00C8E8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowNodeGreen" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00C853" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00C853" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="nodeGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="iconGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="ambientGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="25"/>
+    </filter>
+    <filter id="particleGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+
+    <!-- Clip -->
+    <clipPath id="archClip">
+      <rect x="0" y="0" width="1200" height="400" rx="12" ry="12"/>
+    </clipPath>
+
+    <!-- Data packet marker -->
+    <marker id="arrowHead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#00C8E8" stroke-width="1" opacity="0.6"/>
+    </marker>
+  </defs>
+
+  <g clip-path="url(#archClip)">
+
+    <!-- Background -->
+    <rect width="1200" height="400" fill="url(#archBg)"/>
+
+    <!-- Subtle grid -->
+    <g opacity="0.02">
+      <line x1="0" y1="100" x2="1200" y2="100" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="0" y1="200" x2="1200" y2="200" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="0" y1="300" x2="1200" y2="300" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="300" y1="0" x2="300" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="600" y1="0" x2="600" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="900" y1="0" x2="900" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+    </g>
+
+    <!-- Title -->
+    <text x="600" y="55" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="500" letter-spacing="6" fill="#9A9A9A" opacity="0">
+      ARCHITECTURE
+      <animate attributeName="opacity" values="0;0.8" dur="1.5s" begin="0s" fill="freeze"/>
+    </text>
+
+    <!-- Ambient glows behind nodes -->
+    <ellipse cx="155" cy="210" rx="100" ry="80" fill="url(#glowNodeBlue)" opacity="0.4" filter="url(#ambientGlow)">
+      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="435" cy="210" rx="100" ry="80" fill="url(#glowNodeCyan)" opacity="0.4" filter="url(#ambientGlow)">
+      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="7s" repeatCount="indefinite" begin="1s"/>
+    </ellipse>
+    <ellipse cx="735" cy="210" rx="100" ry="80" fill="url(#glowNodeGreen)" opacity="0.4" filter="url(#ambientGlow)">
+      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="6.5s" repeatCount="indefinite" begin="2s"/>
+    </ellipse>
+    <ellipse cx="1035" cy="210" rx="100" ry="80" fill="url(#glowNodeCyan)" opacity="0.4" filter="url(#ambientGlow)">
+      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="7.5s" repeatCount="indefinite" begin="0.5s"/>
+    </ellipse>
+
+    <!-- === CONNECTION LINES === -->
+
+    <!-- Line 1: Game Screen -> AI Vision -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="1s" begin="1s" fill="freeze"/>
+
+      <!-- Static line -->
+      <line x1="235" y1="210" x2="355" y2="210" stroke="url(#arrowGrad1)" stroke-width="1.5" opacity="0.2"/>
+
+      <!-- Animated pulse traveling along line -->
+      <circle cx="235" cy="210" r="3" fill="#0055A4" opacity="0" filter="url(#particleGlow)">
+        <animate attributeName="cx" values="235;355" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.9;0" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="fill" values="#0055A4;#00C8E8" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="235" cy="210" r="2" fill="#0055A4" opacity="0" filter="url(#particleGlow)">
+        <animate attributeName="cx" values="235;355" dur="2s" repeatCount="indefinite" begin="1s"/>
+        <animate attributeName="opacity" values="0;0.7;0" dur="2s" repeatCount="indefinite" begin="1s"/>
+        <animate attributeName="fill" values="#0055A4;#00C8E8" dur="2s" repeatCount="indefinite" begin="1s"/>
+      </circle>
+
+      <!-- Arrow head -->
+      <path d="M348,204 L358,210 L348,216" fill="none" stroke="#00C8E8" stroke-width="1.5" opacity="0.5">
+        <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- Line 2: AI Vision -> Scent Engine -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="1s" begin="1.5s" fill="freeze"/>
+
+      <line x1="515" y1="210" x2="655" y2="210" stroke="url(#arrowGrad2)" stroke-width="1.5" opacity="0.2"/>
+
+      <circle cx="515" cy="210" r="3" fill="#00C8E8" opacity="0" filter="url(#particleGlow)">
+        <animate attributeName="cx" values="515;655" dur="2.2s" repeatCount="indefinite" begin="0.3s"/>
+        <animate attributeName="opacity" values="0;0.9;0" dur="2.2s" repeatCount="indefinite" begin="0.3s"/>
+        <animate attributeName="fill" values="#00C8E8;#00C853" dur="2.2s" repeatCount="indefinite" begin="0.3s"/>
+      </circle>
+      <circle cx="515" cy="210" r="2" fill="#00C8E8" opacity="0" filter="url(#particleGlow)">
+        <animate attributeName="cx" values="515;655" dur="2.2s" repeatCount="indefinite" begin="1.3s"/>
+        <animate attributeName="opacity" values="0;0.7;0" dur="2.2s" repeatCount="indefinite" begin="1.3s"/>
+        <animate attributeName="fill" values="#00C8E8;#00C853" dur="2.2s" repeatCount="indefinite" begin="1.3s"/>
+      </circle>
+
+      <path d="M648,204 L658,210 L648,216" fill="none" stroke="#00C853" stroke-width="1.5" opacity="0.5">
+        <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.2s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- Line 3: Scent Engine -> BLE Hardware -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="1s" begin="2s" fill="freeze"/>
+
+      <line x1="815" y1="210" x2="955" y2="210" stroke="url(#arrowGrad3)" stroke-width="1.5" opacity="0.2"/>
+
+      <circle cx="815" cy="210" r="3" fill="#00C853" opacity="0" filter="url(#particleGlow)">
+        <animate attributeName="cx" values="815;955" dur="1.8s" repeatCount="indefinite" begin="0.6s"/>
+        <animate attributeName="opacity" values="0;0.9;0" dur="1.8s" repeatCount="indefinite" begin="0.6s"/>
+        <animate attributeName="fill" values="#00C853;#00C8E8" dur="1.8s" repeatCount="indefinite" begin="0.6s"/>
+      </circle>
+      <circle cx="815" cy="210" r="2" fill="#00C853" opacity="0" filter="url(#particleGlow)">
+        <animate attributeName="cx" values="815;955" dur="1.8s" repeatCount="indefinite" begin="1.5s"/>
+        <animate attributeName="opacity" values="0;0.7;0" dur="1.8s" repeatCount="indefinite" begin="1.5s"/>
+        <animate attributeName="fill" values="#00C853;#00C8E8" dur="1.8s" repeatCount="indefinite" begin="1.5s"/>
+      </circle>
+
+      <path d="M948,204 L958,210 L948,216" fill="none" stroke="#00C8E8" stroke-width="1.5" opacity="0.5">
+        <animate attributeName="opacity" values="0.3;0.7;0.3" dur="1.8s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- === NODE 1: Game Screen === -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="1.2s" begin="0.3s" fill="freeze"/>
+
+      <!-- Node container -->
+      <rect x="75" y="140" width="160" height="140" rx="16" fill="url(#nodeGame)" stroke="#0055A4" stroke-width="1" opacity="0.8">
+        <animate attributeName="stroke-opacity" values="0.4;0.8;0.4" dur="4s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- Pulsing ring behind icon -->
+      <circle cx="155" cy="185" r="22" fill="none" stroke="#0055A4" stroke-width="0.8" opacity="0.3">
+        <animate attributeName="r" values="22;26;22" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Monitor icon (abstract screen) -->
+      <g transform="translate(155, 185)" filter="url(#iconGlow)">
+        <rect x="-16" y="-12" width="32" height="22" rx="2" fill="none" stroke="#0055A4" stroke-width="1.5"/>
+        <line x1="-6" y1="13" x2="6" y2="13" stroke="#0055A4" stroke-width="1.5" stroke-linecap="round"/>
+        <rect x="-10" y="-7" width="20" height="13" rx="1" fill="#0055A4" fill-opacity="0.15"/>
+        <!-- Scan line -->
+        <line x1="-10" y1="-7" x2="10" y2="-7" stroke="#0055A4" stroke-width="0.8" opacity="0.6">
+          <animate attributeName="y1" values="-7;6;-7" dur="2s" repeatCount="indefinite"/>
+          <animate attributeName="y2" values="-7;6;-7" dur="2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+        </line>
+      </g>
+
+      <!-- Label -->
+      <text x="155" y="240" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="1" fill="#FFFFFF" opacity="0.9">
+        Game Screen
+      </text>
+      <text x="155" y="258" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" letter-spacing="0.5" fill="#9A9A9A" opacity="0.6">
+        Frame Capture
+      </text>
+    </g>
+
+    <!-- === NODE 2: AI Vision === -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="1.2s" begin="0.6s" fill="freeze"/>
+
+      <rect x="355" y="140" width="160" height="140" rx="16" fill="url(#nodeAI)" stroke="#00C8E8" stroke-width="1" opacity="0.8">
+        <animate attributeName="stroke-opacity" values="0.4;0.8;0.4" dur="5s" repeatCount="indefinite" begin="1s"/>
+      </rect>
+
+      <!-- Pulsing ring -->
+      <circle cx="435" cy="185" r="22" fill="none" stroke="#00C8E8" stroke-width="0.8" opacity="0.3">
+        <animate attributeName="r" values="22;26;22" dur="3.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3.5s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Eye/AI icon (abstract vision) -->
+      <g transform="translate(435, 185)" filter="url(#iconGlow)">
+        <!-- Eye shape -->
+        <path d="M-16,0 Q-8,-10 0,-10 Q8,-10 16,0 Q8,10 0,10 Q-8,10 -16,0 Z" fill="none" stroke="#00C8E8" stroke-width="1.5"/>
+        <!-- Pupil -->
+        <circle cx="0" cy="0" r="5" fill="none" stroke="#00C8E8" stroke-width="1.2">
+          <animate attributeName="r" values="5;4;5" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Core -->
+        <circle cx="0" cy="0" r="2" fill="#00C8E8" fill-opacity="0.5">
+          <animate attributeName="fill-opacity" values="0.3;0.7;0.3" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Scan rays -->
+        <line x1="-8" y1="-14" x2="-4" y2="-10" stroke="#00C8E8" stroke-width="0.6" opacity="0.4">
+          <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite"/>
+        </line>
+        <line x1="8" y1="-14" x2="4" y2="-10" stroke="#00C8E8" stroke-width="0.6" opacity="0.4">
+          <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite" begin="0.3s"/>
+        </line>
+        <line x1="0" y1="-15" x2="0" y2="-11" stroke="#00C8E8" stroke-width="0.6" opacity="0.4">
+          <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite" begin="0.6s"/>
+        </line>
+      </g>
+
+      <text x="435" y="240" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="1" fill="#FFFFFF" opacity="0.9">
+        AI Vision
+      </text>
+      <text x="435" y="258" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" letter-spacing="0.5" fill="#9A9A9A" opacity="0.6">
+        Scene Classification
+      </text>
+    </g>
+
+    <!-- === NODE 3: Scent Engine === -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="1.2s" begin="0.9s" fill="freeze"/>
+
+      <rect x="655" y="140" width="160" height="140" rx="16" fill="url(#nodeScent)" stroke="#00C853" stroke-width="1" opacity="0.8">
+        <animate attributeName="stroke-opacity" values="0.4;0.8;0.4" dur="4.5s" repeatCount="indefinite" begin="0.5s"/>
+      </rect>
+
+      <!-- Pulsing ring -->
+      <circle cx="735" cy="185" r="22" fill="none" stroke="#00C853" stroke-width="0.8" opacity="0.3">
+        <animate attributeName="r" values="22;26;22" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.2;0.4;0.2" dur="4s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Molecule/scent icon -->
+      <g transform="translate(735, 185)" filter="url(#iconGlow)">
+        <!-- Central molecule -->
+        <circle cx="0" cy="0" r="4" fill="#00C853" fill-opacity="0.4" stroke="#00C853" stroke-width="1"/>
+        <!-- Bonds -->
+        <line x1="4" y1="-2" x2="12" y2="-8" stroke="#00C853" stroke-width="1" opacity="0.7"/>
+        <line x1="-4" y1="-2" x2="-12" y2="-8" stroke="#00C853" stroke-width="1" opacity="0.7"/>
+        <line x1="3" y1="3" x2="10" y2="10" stroke="#00C853" stroke-width="1" opacity="0.7"/>
+        <line x1="-3" y1="3" x2="-10" y2="10" stroke="#00C853" stroke-width="1" opacity="0.7"/>
+        <!-- Outer atoms -->
+        <circle cx="13" cy="-9" r="2.5" fill="none" stroke="#00C853" stroke-width="0.8"/>
+        <circle cx="-13" cy="-9" r="2.5" fill="none" stroke="#00C853" stroke-width="0.8"/>
+        <circle cx="11" cy="11" r="2.5" fill="none" stroke="#00C853" stroke-width="0.8"/>
+        <circle cx="-11" cy="11" r="2.5" fill="none" stroke="#00C853" stroke-width="0.8"/>
+        <!-- Emanating waves -->
+        <circle cx="0" cy="0" r="14" fill="none" stroke="#00C853" stroke-width="0.4" opacity="0">
+          <animate attributeName="r" values="14;22" dur="2.5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.4;0" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="0" cy="0" r="14" fill="none" stroke="#00C853" stroke-width="0.4" opacity="0">
+          <animate attributeName="r" values="14;22" dur="2.5s" repeatCount="indefinite" begin="1.25s"/>
+          <animate attributeName="opacity" values="0.3;0" dur="2.5s" repeatCount="indefinite" begin="1.25s"/>
+        </circle>
+      </g>
+
+      <text x="735" y="240" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="1" fill="#FFFFFF" opacity="0.9">
+        Scent Engine
+      </text>
+      <text x="735" y="258" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" letter-spacing="0.5" fill="#9A9A9A" opacity="0.6">
+        Evidence Fusion
+      </text>
+    </g>
+
+    <!-- === NODE 4: BLE Hardware === -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="1.2s" begin="1.2s" fill="freeze"/>
+
+      <rect x="955" y="140" width="160" height="140" rx="16" fill="url(#nodeBLE)" stroke="#00C8E8" stroke-width="1" opacity="0.8">
+        <animate attributeName="stroke-opacity" values="0.4;0.8;0.4" dur="5.5s" repeatCount="indefinite" begin="1.5s"/>
+      </rect>
+
+      <!-- Pulsing ring -->
+      <circle cx="1035" cy="185" r="22" fill="none" stroke="#00C8E8" stroke-width="0.8" opacity="0.3">
+        <animate attributeName="r" values="22;26;22" dur="3.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3.8s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Bluetooth/wireless icon -->
+      <g transform="translate(1035, 185)" filter="url(#iconGlow)">
+        <!-- BLE symbol -->
+        <path d="M0,-14 L8,-6 L-8,6 L0,14 L0,-14 L-8,-6 L8,6 L0,14" fill="none" stroke="#00C8E8" stroke-width="1.3" stroke-linejoin="round"/>
+        <!-- Signal waves -->
+        <path d="M12,-6 Q18,0 12,6" fill="none" stroke="#00C8E8" stroke-width="0.8" opacity="0.5">
+          <animate attributeName="opacity" values="0.2;0.7;0.2" dur="1.5s" repeatCount="indefinite"/>
+        </path>
+        <path d="M15,-10 Q24,0 15,10" fill="none" stroke="#00C8E8" stroke-width="0.6" opacity="0.3">
+          <animate attributeName="opacity" values="0.1;0.5;0.1" dur="1.5s" repeatCount="indefinite" begin="0.3s"/>
+        </path>
+        <path d="M-12,-6 Q-18,0 -12,6" fill="none" stroke="#00C8E8" stroke-width="0.8" opacity="0.5">
+          <animate attributeName="opacity" values="0.2;0.7;0.2" dur="1.5s" repeatCount="indefinite" begin="0.5s"/>
+        </path>
+        <path d="M-15,-10 Q-24,0 -15,10" fill="none" stroke="#00C8E8" stroke-width="0.6" opacity="0.3">
+          <animate attributeName="opacity" values="0.1;0.5;0.1" dur="1.5s" repeatCount="indefinite" begin="0.8s"/>
+        </path>
+      </g>
+
+      <text x="1035" y="240" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="1" fill="#FFFFFF" opacity="0.9">
+        BLE Hardware
+      </text>
+      <text x="1035" y="258" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" letter-spacing="0.5" fill="#9A9A9A" opacity="0.6">
+        Scent Release
+      </text>
+    </g>
+
+    <!-- === LATENCY BADGES === -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="1s" begin="3s" fill="freeze"/>
+
+      <!-- Badge 1: <10ms -->
+      <g transform="translate(295, 170)">
+        <rect x="-24" y="-9" width="48" height="18" rx="9" fill="#0A0A0A" stroke="#0055A4" stroke-width="0.8" opacity="0.6"/>
+        <text x="0" y="4" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="500" fill="#0055A4" opacity="0.8">&lt;10ms</text>
+      </g>
+
+      <!-- Badge 2: <30ms -->
+      <g transform="translate(575, 170)">
+        <rect x="-24" y="-9" width="48" height="18" rx="9" fill="#0A0A0A" stroke="#00C8E8" stroke-width="0.8" opacity="0.6"/>
+        <text x="0" y="4" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="500" fill="#00C8E8" opacity="0.8">&lt;30ms</text>
+      </g>
+
+      <!-- Badge 3: <20ms -->
+      <g transform="translate(875, 170)">
+        <rect x="-24" y="-9" width="48" height="18" rx="9" fill="#0A0A0A" stroke="#00C853" stroke-width="0.8" opacity="0.6"/>
+        <text x="0" y="4" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="500" fill="#00C853" opacity="0.8">&lt;20ms</text>
+      </g>
+    </g>
+
+    <!-- === END-TO-END INDICATOR === -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="1.5s" begin="3.5s" fill="freeze"/>
+
+      <!-- Bottom bar -->
+      <line x1="155" y1="310" x2="1035" y2="310" stroke="#FFFFFF" stroke-width="0.5" opacity="0.08"/>
+
+      <!-- End brackets -->
+      <line x1="155" y1="305" x2="155" y2="315" stroke="#00C8E8" stroke-width="1" opacity="0.3"/>
+      <line x1="1035" y1="305" x2="1035" y2="315" stroke="#00C8E8" stroke-width="1" opacity="0.3"/>
+
+      <!-- Total latency -->
+      <rect x="545" y="300" width="110" height="22" rx="11" fill="#0A0A0A" stroke="#00C8E8" stroke-width="0.8" opacity="0.4">
+        <animate attributeName="stroke-opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      <text x="600" y="315" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="1" fill="#00C8E8" opacity="0.7">
+        &lt;80ms E2E
+      </text>
+    </g>
+
+    <!-- === FLOATING PARTICLES === -->
+    <g filter="url(#particleGlow)">
+      <circle cx="50" cy="100" r="1.5" fill="#0055A4" opacity="0">
+        <animate attributeName="opacity" values="0;0.6;0" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="100;80;100" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1150" cy="320" r="1.5" fill="#00C8E8" opacity="0">
+        <animate attributeName="opacity" values="0;0.5;0" dur="5s" repeatCount="indefinite" begin="1s"/>
+        <animate attributeName="cy" values="320;300;320" dur="5s" repeatCount="indefinite" begin="1s"/>
+      </circle>
+      <circle cx="600" cy="80" r="1" fill="#00C853" opacity="0">
+        <animate attributeName="opacity" values="0;0.4;0" dur="6s" repeatCount="indefinite" begin="2s"/>
+        <animate attributeName="cx" values="600;610;600" dur="6s" repeatCount="indefinite" begin="2s"/>
+      </circle>
+      <circle cx="300" cy="350" r="1.2" fill="#0055A4" opacity="0">
+        <animate attributeName="opacity" values="0;0.5;0" dur="4.5s" repeatCount="indefinite" begin="0.5s"/>
+        <animate attributeName="cy" values="350;335;350" dur="4.5s" repeatCount="indefinite" begin="0.5s"/>
+      </circle>
+      <circle cx="900" cy="90" r="1.3" fill="#00C8E8" opacity="0">
+        <animate attributeName="opacity" values="0;0.4;0" dur="5.5s" repeatCount="indefinite" begin="1.5s"/>
+        <animate attributeName="cy" values="90;75;90" dur="5.5s" repeatCount="indefinite" begin="1.5s"/>
+      </circle>
+    </g>
+
+    <!-- === BOTTOM ACCENT LINE === -->
+    <line x1="0" y1="398" x2="1200" y2="398" stroke="url(#arrowGrad1)" stroke-width="1.5" opacity="0.15">
+      <animate attributeName="opacity" values="0.1;0.25;0.1" dur="6s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Corner accents -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0.3" dur="2s" begin="2.5s" fill="freeze"/>
+      <line x1="15" y1="15" x2="45" y2="15" stroke="#0055A4" stroke-width="0.8" opacity="0.4"/>
+      <line x1="15" y1="15" x2="15" y2="45" stroke="#0055A4" stroke-width="0.8" opacity="0.4"/>
+      <line x1="1155" y1="15" x2="1185" y2="15" stroke="#00C8E8" stroke-width="0.8" opacity="0.4"/>
+      <line x1="1185" y1="15" x2="1185" y2="45" stroke="#00C8E8" stroke-width="0.8" opacity="0.4"/>
+      <line x1="15" y1="385" x2="45" y2="385" stroke="#00C853" stroke-width="0.8" opacity="0.4"/>
+      <line x1="15" y1="355" x2="15" y2="385" stroke="#00C853" stroke-width="0.8" opacity="0.4"/>
+      <line x1="1155" y1="385" x2="1185" y2="385" stroke="#00C8E8" stroke-width="0.8" opacity="0.4"/>
+      <line x1="1185" y1="355" x2="1185" y2="385" stroke="#00C8E8" stroke-width="0.8" opacity="0.4"/>
+    </g>
+
+    <!-- Subtle border -->
+    <rect x="0.5" y="0.5" width="1199" height="399" rx="12" ry="12" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.04"/>
+
+  </g>
+</svg>

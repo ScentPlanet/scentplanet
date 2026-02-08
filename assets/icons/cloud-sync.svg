@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="cs-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0055A4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0055A4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cs-cloud" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C8E8"/>
+      <stop offset="100%" stop-color="#0055A4"/>
+    </linearGradient>
+    <linearGradient id="cs-arrow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00C853"/>
+      <stop offset="100%" stop-color="#00C8E8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background glow -->
+  <circle cx="32" cy="30" r="26" fill="url(#cs-glow)" opacity="0.5">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Cloud shape -->
+  <path d="M16 36 Q10 36 10 30 Q10 24 16 22 Q16 14 24 12 Q32 8 38 14 Q42 10 48 14
+           Q54 18 52 26 Q56 28 56 32 Q56 36 52 36 Z"
+        fill="none" stroke="url(#cs-cloud)" stroke-width="2" stroke-linejoin="round" opacity="0.8">
+    <animate attributeName="opacity" values="0.6;0.95;0.6" dur="4s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Cloud subtle fill -->
+  <path d="M16 36 Q10 36 10 30 Q10 24 16 22 Q16 14 24 12 Q32 8 38 14 Q42 10 48 14
+           Q54 18 52 26 Q56 28 56 32 Q56 36 52 36 Z"
+        fill="#0055A4" opacity="0.06"/>
+
+  <!-- Circular sync arrows - rotating group -->
+  <g opacity="0.85">
+    <animateTransform attributeName="transform" type="rotate" from="0 32 44" to="360 32 44" dur="6s" repeatCount="indefinite"/>
+
+    <!-- Arrow 1 - top arc -->
+    <path d="M24 40 A10 10 0 0 1 40 40" fill="none" stroke="url(#cs-arrow)" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- Arrowhead 1 -->
+    <polygon points="40,40 36,37 37,41" fill="#00C8E8" opacity="0.9"/>
+
+    <!-- Arrow 2 - bottom arc -->
+    <path d="M40 48 A10 10 0 0 1 24 48" fill="none" stroke="url(#cs-arrow)" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- Arrowhead 2 -->
+    <polygon points="24,48 28,51 27,47" fill="#00C853" opacity="0.9"/>
+  </g>
+
+  <!-- Center dot -->
+  <circle cx="32" cy="44" r="2" fill="#00C8E8" opacity="0.5">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Data particles floating up into cloud -->
+  <circle cx="28" cy="50" r="1" fill="#00C8E8" opacity="0">
+    <animate attributeName="cy" values="52;36;32" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.6;0" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="36" cy="50" r="0.8" fill="#00C853" opacity="0">
+    <animate attributeName="cy" values="54;38;34" dur="3s" begin="1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.5;0" dur="3s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="32" cy="50" r="0.6" fill="#0055A4" opacity="0">
+    <animate attributeName="cy" values="56;40;36" dur="3s" begin="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.4;0" dur="3s" begin="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

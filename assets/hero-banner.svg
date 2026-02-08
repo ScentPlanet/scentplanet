@@ -1,0 +1,342 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0A"/>
+      <stop offset="50%" stop-color="#0D0D10"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </linearGradient>
+
+    <!-- Cyan glow gradient -->
+    <radialGradient id="glowCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00C8E8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00C8E8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Blue glow gradient -->
+    <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0055A4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0055A4" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Green glow gradient -->
+    <radialGradient id="glowGreen" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00C853" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00C853" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Text gradient for logo -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#00C8E8"/>
+      <stop offset="100%" stop-color="#0055A4"/>
+    </linearGradient>
+
+    <!-- Shimmer gradient for text reveal -->
+    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0">
+        <animate attributeName="stop-opacity" values="0;0;1;1" dur="3s" begin="0s" fill="freeze"/>
+      </stop>
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0">
+        <animate attributeName="stop-opacity" values="0;0;1;1" dur="3s" begin="0.2s" fill="freeze"/>
+      </stop>
+      <stop offset="60%" stop-color="#00C8E8" stop-opacity="0">
+        <animate attributeName="stop-opacity" values="0;0;1;1" dur="3s" begin="0.4s" fill="freeze"/>
+      </stop>
+      <stop offset="100%" stop-color="#0055A4" stop-opacity="0">
+        <animate attributeName="stop-opacity" values="0;0;1;1" dur="3s" begin="0.6s" fill="freeze"/>
+      </stop>
+    </linearGradient>
+
+    <!-- Subtitle fade gradient -->
+    <linearGradient id="subtitleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9A9A9A"/>
+      <stop offset="50%" stop-color="#CCCCCC"/>
+      <stop offset="100%" stop-color="#9A9A9A"/>
+    </linearGradient>
+
+    <!-- Bottom wave gradient -->
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0055A4" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#0055A4" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#00C8E8" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#0055A4" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0055A4" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00C8E8" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#00C853" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#00C8E8" stop-opacity="0.3"/>
+      <stop offset="80%" stop-color="#0055A4" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00C8E8" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Orb glow filter -->
+    <filter id="orbGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="textGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Clip for rounded corners -->
+    <clipPath id="roundedClip">
+      <rect x="0" y="0" width="1200" height="400" rx="12" ry="12"/>
+    </clipPath>
+  </defs>
+
+  <!-- Main container with rounded corners -->
+  <g clip-path="url(#roundedClip)">
+
+    <!-- Background -->
+    <rect width="1200" height="400" fill="url(#bgGrad)"/>
+
+    <!-- Subtle grid pattern -->
+    <g opacity="0.03">
+      <line x1="0" y1="0" x2="0" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="60" y1="0" x2="60" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="120" y1="0" x2="120" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="180" y1="0" x2="180" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="240" y1="0" x2="240" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="300" y1="0" x2="300" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="360" y1="0" x2="360" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="420" y1="0" x2="420" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="480" y1="0" x2="480" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="540" y1="0" x2="540" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="600" y1="0" x2="600" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="660" y1="0" x2="660" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="720" y1="0" x2="720" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="780" y1="0" x2="780" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="840" y1="0" x2="840" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="900" y1="0" x2="900" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="960" y1="0" x2="960" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="1020" y1="0" x2="1020" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="1080" y1="0" x2="1080" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="1140" y1="0" x2="1140" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="1200" y1="0" x2="1200" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="0" y1="60" x2="1200" y2="60" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="0" y1="120" x2="1200" y2="120" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="0" y1="180" x2="1200" y2="180" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="0" y1="240" x2="1200" y2="240" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="0" y1="300" x2="1200" y2="300" stroke="#FFFFFF" stroke-width="0.5"/>
+      <line x1="0" y1="360" x2="1200" y2="360" stroke="#FFFFFF" stroke-width="0.5"/>
+    </g>
+
+    <!-- Large ambient glow orbs (background atmosphere) -->
+    <ellipse cx="300" cy="180" rx="250" ry="180" fill="url(#glowBlue)" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="250;270;250" dur="8s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <ellipse cx="900" cy="200" rx="220" ry="160" fill="url(#glowCyan)" opacity="0.4">
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="220;240;220" dur="10s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <ellipse cx="600" cy="350" rx="300" ry="100" fill="url(#glowGreen)" opacity="0.3">
+      <animate attributeName="opacity" values="0.15;0.35;0.15" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Floating particles - Cyan -->
+    <g filter="url(#orbGlow)">
+      <!-- Particle 1 -->
+      <circle cx="150" cy="80" r="2" fill="#00C8E8" opacity="0">
+        <animate attributeName="opacity" values="0;0.8;0" dur="4s" repeatCount="indefinite" begin="0s"/>
+        <animate attributeName="cy" values="80;60;80" dur="4s" repeatCount="indefinite" begin="0s"/>
+      </circle>
+      <!-- Particle 2 -->
+      <circle cx="350" cy="320" r="1.5" fill="#00C8E8" opacity="0">
+        <animate attributeName="opacity" values="0;0.6;0" dur="5s" repeatCount="indefinite" begin="1s"/>
+        <animate attributeName="cy" values="320;290;320" dur="5s" repeatCount="indefinite" begin="1s"/>
+      </circle>
+      <!-- Particle 3 -->
+      <circle cx="820" cy="100" r="2.5" fill="#00C8E8" opacity="0">
+        <animate attributeName="opacity" values="0;0.7;0" dur="3.5s" repeatCount="indefinite" begin="0.5s"/>
+        <animate attributeName="cy" values="100;75;100" dur="3.5s" repeatCount="indefinite" begin="0.5s"/>
+      </circle>
+      <!-- Particle 4 -->
+      <circle cx="1050" cy="250" r="1.8" fill="#00C8E8" opacity="0">
+        <animate attributeName="opacity" values="0;0.5;0" dur="6s" repeatCount="indefinite" begin="2s"/>
+        <animate attributeName="cy" values="250;225;250" dur="6s" repeatCount="indefinite" begin="2s"/>
+      </circle>
+      <!-- Particle 5 -->
+      <circle cx="500" cy="60" r="1.2" fill="#00C8E8" opacity="0">
+        <animate attributeName="opacity" values="0;0.9;0" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+        <animate attributeName="cx" values="500;510;500" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+      </circle>
+    </g>
+
+    <!-- Floating particles - Blue -->
+    <g filter="url(#orbGlow)">
+      <circle cx="250" cy="200" r="2" fill="#0055A4" opacity="0">
+        <animate attributeName="opacity" values="0;0.7;0" dur="5s" repeatCount="indefinite" begin="0.3s"/>
+        <animate attributeName="cy" values="200;180;200" dur="5s" repeatCount="indefinite" begin="0.3s"/>
+      </circle>
+      <circle cx="700" cy="300" r="1.5" fill="#0055A4" opacity="0">
+        <animate attributeName="opacity" values="0;0.6;0" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
+        <animate attributeName="cy" values="300;275;300" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
+      </circle>
+      <circle cx="950" cy="150" r="2.2" fill="#0055A4" opacity="0">
+        <animate attributeName="opacity" values="0;0.5;0" dur="6s" repeatCount="indefinite" begin="0.8s"/>
+        <animate attributeName="cy" values="150;130;150" dur="6s" repeatCount="indefinite" begin="0.8s"/>
+      </circle>
+    </g>
+
+    <!-- Floating particles - Green -->
+    <g filter="url(#orbGlow)">
+      <circle cx="180" cy="340" r="1.5" fill="#00C853" opacity="0">
+        <animate attributeName="opacity" values="0;0.5;0" dur="7s" repeatCount="indefinite" begin="0.5s"/>
+        <animate attributeName="cy" values="340;320;340" dur="7s" repeatCount="indefinite" begin="0.5s"/>
+      </circle>
+      <circle cx="1100" cy="80" r="1.8" fill="#00C853" opacity="0">
+        <animate attributeName="opacity" values="0;0.6;0" dur="5.5s" repeatCount="indefinite" begin="2.5s"/>
+        <animate attributeName="cy" values="80;60;80" dur="5.5s" repeatCount="indefinite" begin="2.5s"/>
+      </circle>
+      <circle cx="600" cy="350" r="1.3" fill="#00C853" opacity="0">
+        <animate attributeName="opacity" values="0;0.4;0" dur="4s" repeatCount="indefinite" begin="3s"/>
+        <animate attributeName="cx" values="600;615;600" dur="4s" repeatCount="indefinite" begin="3s"/>
+      </circle>
+    </g>
+
+    <!-- Larger floating orbs with slow drift -->
+    <circle cx="100" cy="150" r="40" fill="url(#glowCyan)" opacity="0.15" filter="url(#softGlow)">
+      <animate attributeName="cx" values="100;130;100" dur="15s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="150;130;150" dur="12s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.1;0.2;0.1" dur="6s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="1100" cy="300" r="35" fill="url(#glowBlue)" opacity="0.12" filter="url(#softGlow)">
+      <animate attributeName="cx" values="1100;1070;1100" dur="18s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="300;280;300" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.08;0.18;0.08" dur="7s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Molecule-like icon (abstract scent symbol) centered above text -->
+    <g transform="translate(600, 100)" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="1.5s" begin="0.5s" fill="freeze"/>
+
+      <!-- Central ring -->
+      <circle cx="0" cy="0" r="18" fill="none" stroke="#00C8E8" stroke-width="1.5" opacity="0.6">
+        <animate attributeName="r" values="18;20;18" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.4;0.7;0.4" dur="4s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Orbiting dots -->
+      <circle cx="0" cy="-18" r="3" fill="#00C8E8" opacity="0.8">
+        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="18" r="2.5" fill="#0055A4" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate" from="180 0 0" to="540 0 0" dur="6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="18" cy="0" r="2" fill="#00C853" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" from="90 0 0" to="450 0 0" dur="8s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Outer ring -->
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#0055A4" stroke-width="0.8" opacity="0.3" stroke-dasharray="4 6">
+        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="20s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.2;0.4;0.2" dur="5s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Emanating waves (scent diffusion) -->
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#00C8E8" stroke-width="0.5" opacity="0">
+        <animate attributeName="r" values="22;45" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.4;0" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#00C8E8" stroke-width="0.5" opacity="0">
+        <animate attributeName="r" values="22;45" dur="3s" repeatCount="indefinite" begin="1s"/>
+        <animate attributeName="opacity" values="0.3;0" dur="3s" repeatCount="indefinite" begin="1s"/>
+      </circle>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#00C8E8" stroke-width="0.5" opacity="0">
+        <animate attributeName="r" values="22;45" dur="3s" repeatCount="indefinite" begin="2s"/>
+        <animate attributeName="opacity" values="0.2;0" dur="3s" repeatCount="indefinite" begin="2s"/>
+      </circle>
+    </g>
+
+    <!-- Logo Text: "ScentPlanet" with reveal -->
+    <text x="600" y="195" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="56" font-weight="700" letter-spacing="2" fill="url(#shimmer)" filter="url(#textGlow)">
+      ScentPlanet
+    </text>
+
+    <!-- Thin accent line under logo -->
+    <line x1="480" y1="215" x2="720" y2="215" stroke="url(#waveGrad)" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;0.6" dur="2s" begin="1.5s" fill="freeze"/>
+    </line>
+    <line x1="520" y1="215" x2="680" y2="215" stroke="#00C8E8" stroke-width="0.5" opacity="0">
+      <animate attributeName="opacity" values="0;0.3;0;0.3" dur="4s" begin="2s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Subtitle -->
+    <text x="600" y="252" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="300" letter-spacing="4" fill="url(#subtitleGrad)" opacity="0">
+      Real-time Olfactory Gaming Experience
+      <animate attributeName="opacity" values="0;1" dur="2s" begin="2s" fill="freeze"/>
+    </text>
+
+    <!-- Version badge -->
+    <g transform="translate(600, 285)" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="1.5s" begin="2.8s" fill="freeze"/>
+      <rect x="-45" y="-12" width="90" height="24" rx="12" fill="#0055A4" fill-opacity="0.2" stroke="#0055A4" stroke-width="0.8" stroke-opacity="0.4"/>
+      <text x="0" y="5" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="500" letter-spacing="1.5" fill="#00C8E8" opacity="0.8">
+        TAURI 2.x
+      </text>
+    </g>
+
+    <!-- Bottom gradient wave -->
+    <g>
+      <!-- Wave 1 -->
+      <path d="M0,380 Q150,355 300,370 T600,360 T900,370 T1200,355 L1200,400 L0,400 Z" fill="url(#waveGrad)" opacity="0.15">
+        <animate attributeName="d" values="M0,380 Q150,355 300,370 T600,360 T900,370 T1200,355 L1200,400 L0,400 Z;M0,375 Q150,360 300,365 T600,370 T900,360 T1200,365 L1200,400 L0,400 Z;M0,380 Q150,355 300,370 T600,360 T900,370 T1200,355 L1200,400 L0,400 Z" dur="8s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Wave 2 -->
+      <path d="M0,385 Q200,365 400,378 T800,368 T1200,375 L1200,400 L0,400 Z" fill="url(#waveGrad2)" opacity="0.1">
+        <animate attributeName="d" values="M0,385 Q200,365 400,378 T800,368 T1200,375 L1200,400 L0,400 Z;M0,382 Q200,370 400,372 T800,375 T1200,368 L1200,400 L0,400 Z;M0,385 Q200,365 400,378 T800,368 T1200,375 L1200,400 L0,400 Z" dur="10s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Accent line at bottom -->
+      <line x1="0" y1="398" x2="1200" y2="398" stroke="url(#waveGrad)" stroke-width="2" opacity="0.3">
+        <animate attributeName="opacity" values="0.2;0.4;0.2" dur="5s" repeatCount="indefinite"/>
+      </line>
+    </g>
+
+    <!-- Corner accents -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0.4" dur="2s" begin="3s" fill="freeze"/>
+      <!-- Top-left -->
+      <line x1="20" y1="20" x2="60" y2="20" stroke="#00C8E8" stroke-width="1" opacity="0.3"/>
+      <line x1="20" y1="20" x2="20" y2="60" stroke="#00C8E8" stroke-width="1" opacity="0.3"/>
+      <!-- Top-right -->
+      <line x1="1140" y1="20" x2="1180" y2="20" stroke="#00C8E8" stroke-width="1" opacity="0.3"/>
+      <line x1="1180" y1="20" x2="1180" y2="60" stroke="#00C8E8" stroke-width="1" opacity="0.3"/>
+      <!-- Bottom-left -->
+      <line x1="20" y1="380" x2="60" y2="380" stroke="#0055A4" stroke-width="1" opacity="0.3"/>
+      <line x1="20" y1="340" x2="20" y2="380" stroke="#0055A4" stroke-width="1" opacity="0.3"/>
+      <!-- Bottom-right -->
+      <line x1="1140" y1="380" x2="1180" y2="380" stroke="#0055A4" stroke-width="1" opacity="0.3"/>
+      <line x1="1180" y1="340" x2="1180" y2="380" stroke="#0055A4" stroke-width="1" opacity="0.3"/>
+    </g>
+
+    <!-- Subtle border -->
+    <rect x="0.5" y="0.5" width="1199" height="399" rx="12" ry="12" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.04"/>
+
+  </g>
+</svg>

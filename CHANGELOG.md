@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.7] - 2026-02-08
+
+### Added
+
+- Comprehensive frontend unit test suite with Vitest
+- End-to-end test suite with shared fixtures
+- Ghost titlebar fix for WebView2 overlay window
+
+### Fixed
+
+- Win32_Graphics_Dwm feature flag for BLE module
+- Overlay window ghost titlebar on Windows
+
 ## [0.3.6] - 2026-02-07
 
 ### Added
