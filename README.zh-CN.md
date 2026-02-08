@@ -106,7 +106,7 @@ AI 视觉实时分析你的屏幕。不只是像素 &mdash; 它理解你在游�
 
 <br/>
 
-**[下载最新版本](https://github.com/ScentPlanet/scentplanet/releases/latest)**
+**[下载 Windows 版本](https://github.com/ScentPlanet/scentplanet/releases/latest/download/ScentPlanet-Setup.exe)**
 
 Windows 10/11 (64位) &nbsp;&middot;&nbsp; 4GB 内存 &nbsp;&middot;&nbsp; 蓝牙低功耗 &nbsp;&middot;&nbsp; 内置自动更新
 
