@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://scentplanet.github.io/scentplanet/sitemap.xml
