@@ -106,7 +106,7 @@ Create custom scent profiles for any title. Map environments to cartridges. Shar
 
 <br/>
 
-**[Download latest release](https://github.com/ScentPlanet/scentplanet/releases/latest)**
+**[Download for Windows](https://github.com/ScentPlanet/scentplanet/releases/latest/download/ScentPlanet-Setup.exe)**
 
 Windows 10/11 (64-bit) &nbsp;&middot;&nbsp; 4GB RAM &nbsp;&middot;&nbsp; Bluetooth LE &nbsp;&middot;&nbsp; Auto-update built in
 
