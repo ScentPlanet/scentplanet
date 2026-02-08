@@ -17,9 +17,9 @@
 
 <br/><br/>
 
-**AI-powered scent synchronization for gaming.**
+**Feel every world.**
 <br/>
-Experience every game environment through real-time olfactory immersion.
+A new sense for gaming &mdash; real scent, triggered by AI, delivered in real time.
 
 <br/>
 
@@ -37,11 +37,9 @@ English &nbsp;|&nbsp; <a href="README.zh-CN.md">简体中文</a>
 
 <br/>
 
-> *Riding through a pine forest — you smell the wood.*
-> *Setting up camp at night — smoke fills the air.*
-> *Walking past wildflowers — a floral scent surrounds you.*
+## A new sense for gaming.
 
-ScentPlanet understands **where you are** in the game world — not just what's on screen — and triggers real scents to match your environment.
+Your game world comes alive through scent. Step into a forest, and breathe it in. No mods. No plugins. Just play &mdash; ScentPlanet handles the rest.
 
 <br/>
 
@@ -55,7 +53,9 @@ ScentPlanet understands **where you are** in the game world — not just what's 
 
 <br/>
 
-## How It Works
+## How it works
+
+ScentPlanet sees what you see. It understands your game world in real time &mdash; forests, campfires, open fields &mdash; and responds instantly.
 
 <div align="center">
 <img src="assets/architecture-flow.svg" alt="Architecture" width="100%">
@@ -63,14 +63,35 @@ ScentPlanet understands **where you are** in the game world — not just what's 
 
 <br/>
 
-## Features
+**01 &mdash; It sees what you see.**
+<br/>
+AI vision analyzes your screen in real time. Not just pixels &mdash; it understands *where you are* in the game world.
 
-- **Environment-aware detection** — Three-layer architecture recognizes your in-game location, not just viewport content. Looking at the sky in a forest still triggers forest scent.
-- **Audio-visual fusion** — Combines game audio cues (fire crackling, cooking sounds, water flow) with visual analysis for higher accuracy.
-- **Olfactory adaptation** — Exponential decay curve prevents scent fatigue during prolonged exposure. Automatic reset on scene transitions.
-- **Per-game profiles** — Customizable scent mappings for each game. Create your own or use built-in profiles for Red Dead Redemption 2, Minecraft, and more.
-- **Sub-100ms latency** — Screen capture to scent release in under 80ms end-to-end.
-- **6 scent cartridges** — Fresh Grass, BBQ, Pine/Wood, Campfire Smoke, Cooking, Floral.
+**02 &mdash; Six scents. Endless worlds.**
+<br/>
+Interchangeable cartridges bring each environment to life. Pine, smoke, fresh grass &mdash; right at your desk.
+
+**03 &mdash; Every game. Instantly.**
+<br/>
+No mods needed. Works with any game through AI vision. Red Dead Redemption 2, Minecraft, GTA, Elden Ring &mdash; just play.
+
+<br/>
+
+---
+
+<br/>
+
+## Built for the worlds you love.
+
+From the plains of New Austin to the depths of Minecraft caves. Every world has a scent.
+
+| | Game | Studio | Environments |
+|:--|:-----|:-------|:-------------|
+| | **Red Dead Redemption 2** | Rockstar Games | Grassland, Forest, Desert, Campfire, Cooking, Flowers |
+| | **Minecraft** | Mojang Studios | Forest, Campfire, Flowers, Cooking |
+| | **Every Open World** | Universal | Works with any game through AI vision |
+
+> Create custom scent profiles for any title. Map environments to cartridges. Share with the community via [game-profiles](https://github.com/ScentPlanet/game-profiles).
 
 <br/>
 
@@ -96,7 +117,7 @@ Windows 10/11 (64-bit) &nbsp;&bull;&nbsp; 4GB RAM &nbsp;&bull;&nbsp; Bluetooth L
 
 <br/>
 
-macOS and Linux — coming soon
+macOS and Linux &mdash; coming soon
 
 </div>
 
@@ -106,27 +127,11 @@ macOS and Linux — coming soon
 
 <br/>
 
-## Supported Games
-
-| Game | Status | Environments |
-|:-----|:------:|:-------------|
-| **Red Dead Redemption 2** | Official | Grassland, Forest, Desert, Campfire, Cooking, Flowers |
-| **Minecraft** | Official | Forest, Campfire, Flowers, Cooking |
-| **Generic** | Built-in | Works with any game using general detection |
-
-> Want to add your game? Contribute a profile to [game-profiles](https://github.com/ScentPlanet/game-profiles).
-
-<br/>
-
----
-
-<br/>
-
-## Tech Stack
+## Powered by
 
 | Layer | Technology |
 |:------|:-----------|
-| Desktop | [Tauri 2.x](https://tauri.app) — Rust backend, WebView frontend |
+| Desktop | [Tauri 2.x](https://tauri.app) &mdash; Rust backend, WebView frontend |
 | Frontend | React 19, TypeScript 5, Vite 6, Zustand 5 |
 | AI Vision | Cloud VLM via [OpenRouter](https://openrouter.ai) |
 | Hardware | ESP32-C3 BLE with Web Bluetooth API |
@@ -141,24 +146,15 @@ macOS and Linux — coming soon
 
 ## Community
 
-<table>
-<tr>
-<td width="50%">
-
+- [**Discord**](https://discord.com/channels/1450784037886103605/1450793325228458095) &mdash; Join the community
 - [**Bug Report**](https://github.com/ScentPlanet/scentplanet/issues/new?template=bug_report.yml)
 - [**Feature Request**](https://github.com/ScentPlanet/scentplanet/issues/new?template=feature_request.yml)
 - [**Discussions**](https://github.com/ScentPlanet/scentplanet/discussions)
-
-</td>
-<td width="50%">
-
-- [**Discord**](https://discord.com/channels/1450784037886103605/1450793325228458095)
-- [**Twitter/X**](https://x.com/ScentPlanetApp)
 - [**Changelog**](CHANGELOG.md)
 
-</td>
-</tr>
-</table>
+<br/>
+
+---
 
 <br/>
 
@@ -167,16 +163,16 @@ macOS and Linux — coming soon
 <br/>
 
 **Do I need special hardware?**
-Yes — ScentPlanet requires our companion BLE scent device with 6 cartridge slots.
+<br/>
+Yes &mdash; ScentPlanet requires our companion BLE scent device with 6 cartridge slots.
 
 **How much does the AI cost?**
+<br/>
 Scene recognition uses OpenRouter's cloud VLM API. Typical cost is $0.001–0.005 per session. You bring your own API key.
 
-**Is the app open source?**
-The desktop app is proprietary. Our [game profile library](https://github.com/ScentPlanet/game-profiles) is open source (CC-BY-SA 4.0).
-
 **Can I customize scent intensity?**
-Yes — per-environment intensity settings, global controls, and olfactory adaptation parameters are all configurable.
+<br/>
+Yes &mdash; per-environment intensity settings, global controls, and olfactory adaptation parameters are all configurable.
 
 </details>
 
@@ -196,11 +192,11 @@ ScentPlanet processes screenshots locally and sends them to your configured VLM 
 
 <br/><br/>
 
-**ScentPlanet** — Gaming, Reimagined.
+**ScentPlanet** &mdash; Feel every world.
 
 <br/>
 
-[Releases](https://github.com/ScentPlanet/scentplanet/releases) &nbsp;&bull;&nbsp; [Discord](https://discord.com/channels/1450784037886103605/1450793325228458095) &nbsp;&bull;&nbsp; [Twitter](https://x.com/ScentPlanetApp)
+[Releases](https://github.com/ScentPlanet/scentplanet/releases) &nbsp;&bull;&nbsp; [Discord](https://discord.com/channels/1450784037886103605/1450793325228458095)
 
 <br/>
 </div>
